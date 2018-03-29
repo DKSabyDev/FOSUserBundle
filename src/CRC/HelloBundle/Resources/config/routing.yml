@@ -1,0 +1,11 @@
+crc_hello_homepage:
+    path:     /welcome
+    defaults: { _controller: CRCHelloBundle:Default:index }
+    
+crc_hello:
+    path:     /hello
+    defaults: { _controller: CRCHelloBundle:Hello:Hello }
+    
+crc_parler:
+    path:     /parler
+    defaults: { _controller: CRCHelloBundle:Parler:Parler }

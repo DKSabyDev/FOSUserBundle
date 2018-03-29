@@ -1,0 +1,68 @@
+<?php
+
+namespace CRC\HelloBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * Tpcrc
+ * @ORM\Table(name="crc_tpcrc")
+ * @ORM\Entity(repositoryClass="CRC\HelloBundle\Repository\TpcrcRepository")
+ */
+class Tpcrc
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+
+    
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="telephone", type="integer")
+     */
+    private $telephone;
+    
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=255)
+     * @Assert\Email(
+     *     message = "l'adresse email '{{ value }}' est invalide.",
+     *     checkMX = true
+     * )
+     *
+     * 
+     */
+    private $email;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="libelle", type="string", length=255)
+     */
+    private $libelle;
+    
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetime")
+     * @Assert\DateTime()
+     */
+    private $date;
+    
+    
+    
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

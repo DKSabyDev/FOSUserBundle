@@ -1,0 +1,11 @@
+CRC\HelloBundle\Entity\Tpcrc:
+    type: entity
+    table: null
+    repositoryClass: CRC\HelloBundle\Repository\TpcrcRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

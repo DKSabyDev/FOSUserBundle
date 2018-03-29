@@ -1,0 +1,5 @@
+cr_ctp_personne:
+    resource: "@CRCtpBundle/Resources/config/routing/personne.yml"
+    prefix:   /personne
+
+
